@@ -1,0 +1,11 @@
+<ul>
+  {{#each projects as |project|}}
+    <li {{action "showProject" project}}>{{project.name}}</li>
+  {{/each}}
+</ul>
+
+{{#if selectedProject}}
+  {{#ember-magellan models=projects model=selectedProject as |project|}}
+    I AM DETAILS FOR {{project.name}}
+  {{/ember-magellan}}
+{{/if}}
