@@ -21,67 +21,76 @@ $fa-font-path: '/assets/fonts' !default;
   background-color: #fff;
 
   header {
+    line-height: 50px;
     height: 50px;
     background-color: #e1e5ea;
+    padding: 0 10px;
 
     nav {
-      ul {
-        margin: 0;
-        padding-left: 0;
-        list-style-type: none;
-        float: left;
-      }
+      float: left;
+    }
 
-      li, .close {
-        display: inline-block;
-      }
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style-type: none;
 
-      button {
-        cursor: pointer;
-        font-weight: 300;
-        line-height: normal;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        transition: color 150ms ease;
-        background-color: #fff;
-        border: 1px solid #bbb;
-        border-radius: 4px;
-        color: #888;
-        width: 38px;
-        height: 38px;
+      &:after {
+        clear: both;
       }
+    }
+
+    li {
+      float: left;
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #888;
+      width: 38px;
+      height: 38px;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    i {
+      @include fa-icon;
+
+      font-size: 20px;
+    }
+
+    .actions {
+      float: right;
+    }
+
+    .previous {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
 
       i {
-        @include fa-icon;
+        @extend .fa-angle-left;
       }
+    }
 
-      .previous {
-        border-bottom-left-radius: 4px;
-        border-top-left-radius: 4px;
+    .next {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-left: 0;
 
-        i {
-          @extend .fa-angle-left;
-        }
+      i {
+        @extend .fa-angle-right;
       }
+    }
 
-      .next {
-        border-bottom-right-radius: 4px;
-        border-top-right-radius: 4px;
-
-        i {
-          @extend .fa-angle-right;
-        }
-      }
-
-      .close {
-        float: right;
-
-        i {
-          @extend .fa-close;
-        }
-      }
+    .close i {
+      @extend .fa-close;
     }
   }
 }
