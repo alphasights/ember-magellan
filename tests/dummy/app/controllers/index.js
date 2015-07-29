@@ -24,6 +24,10 @@ export default Ember.Controller.extend({
   actions: {
     showProject: function(project) {
       this.set('selectedProject', project);
+    },
+
+    hideProject: function() {
+      this.set('selectedProject', null);
     }
   }
 });

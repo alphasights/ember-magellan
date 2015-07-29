@@ -1,3 +1,20 @@
-{{#ember-wormhole to=destinationElementId}}
-  {{yield model this}}
+{{#ember-wormhole to=containerElementId}}
+  <div class="ember-magellan-overlay" {{action "close"}}></div>
+
+  <div class="ember-magellan-panel">
+    <header>
+      <nav>
+        <ul>
+          <li class="previous"><a></a></li>
+          <li class="next"><a></a></li>
+        </ul>
+
+        <a class="close" {{action "close"}}></a>
+      </nav>
+    </header>
+
+    <div class="ember-magellan-content">
+      {{yield model this}}
+    </div>
+  </div>
 {{/ember-wormhole}}

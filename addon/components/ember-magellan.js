@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  destinationElementId: 'ember-magellan-container',
+  containerElementId: 'ember-magellan-container',
   model: null,
-  models: null
+  models: null,
+
+  actions: {
+    close: function() {
+      this.sendAction('onClose');
+    }
+  }
 });

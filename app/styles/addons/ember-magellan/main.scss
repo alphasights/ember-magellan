@@ -1,0 +1,31 @@
+.ember-magellan-overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.4;
+}
+
+.ember-magellan-panel {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+
+  header {
+    height: 50px;
+    background-color: #e1e5ea;
+  }
+}
+
+.ember-magellan-content {
+  padding: 15px;
+
+  h1 {
+    margin: 0;
+  }
+}
